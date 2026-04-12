@@ -21,4 +21,9 @@
   nixpkgs.config = {
     allowUnfree = true;
   };
+
+  # Quick installs: add one package name per line here for tools that need no extra config.
+  home.packages = with pkgs; [
+    vesktop
+  ];
 }
