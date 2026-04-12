@@ -3,11 +3,15 @@
 {
   programs.git = {
     enable = true;
-    userName = "tungnguyenlam";
-    userEmail = "nguyenlamtung2005@gmail.com";
-    aliases = {
-      st = "status";
-      co = "checkout";
+    settings = {
+      user = {
+        name = "tungnguyenlam";
+        email = "nguyenlamtung2005@gmail.com";
+      };
+      alias = {
+        st = "status";
+        co = "checkout";
+      };
     };
   };
 }
