@@ -12,7 +12,6 @@
     ./programs/git.nix
     ./programs/bash.nix
     ./programs/starship.nix
-    ./programs/vscode.nix
   ];
 
   # Let Home Manager install itself permanently
