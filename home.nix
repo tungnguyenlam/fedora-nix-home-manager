@@ -1,0 +1,24 @@
+{ config, lib, pkgs, ... }:
+
+{
+  # Basic Home Manager info
+  home.username = "tungnguyen";
+  home.homeDirectory = "/home/tungnguyen";
+  home.stateVersion = "25.05"; # Update this when you update Nixpkgs inputs
+
+  imports = [
+    ./programs/shell.nix
+    ./programs/tailscale.nix
+    ./programs/git.nix
+    ./programs/bash.nix
+    ./programs/starship.nix
+    ./programs/vscode.nix
+  ];
+
+  # Let Home Manager install itself permanently
+  programs.home-manager.enable = true;
+
+  nixpkgs.config = {
+    allowUnfree = true;
+  };
+}
