@@ -19,6 +19,10 @@
       # Live syntax highlighting while typing (green valid commands, red invalid).
       source "${pkgs.blesh}/share/blesh/ble.sh"
 
+      # Override blesh defaults: bash builtins (like `cd`) should be green.
+      ble-face -s command_builtin fg=green
+      ble-face -s command_builtin_dot fg=green,bold
+
       eval "$(starship init bash)"
     '';
     shellAliases = {

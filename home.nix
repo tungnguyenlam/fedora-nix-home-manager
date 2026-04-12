@@ -8,7 +8,7 @@
 
   imports = [
     ./programs/shell.nix
-    ./programs/tailscale.nix
+    ./programs/tailscaled.nix
     ./programs/git.nix
     ./programs/bash.nix
     ./programs/starship.nix
