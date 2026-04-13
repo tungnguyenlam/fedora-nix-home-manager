@@ -23,6 +23,32 @@
       ble-face -s command_builtin fg=green
       ble-face -s command_builtin_dot fg=green,bold
 
+      newflake() {
+        local template="$HOME/.config/home-manager/sample-flake.nix"
+
+        if [[ -e "./flake.nix" ]]; then
+          echo "flake.nix already exists in $PWD. Refusing to overwrite."
+          return 1
+        fi
+
+        if [[ ! -f "$template" ]]; then
+          echo "Template not found: $template"
+          return 1
+        fi
+
+        cp "$template" "./flake.nix"
+        echo "Created ./flake.nix from $template"
+      }
+
+      newflake-init() {
+        if [[ -e "./flake.nix" ]]; then
+          echo "flake.nix already exists in $PWD. Refusing to overwrite."
+          return 1
+        fi
+
+        nix flake init
+      }
+
       eval "$(starship init bash)"
     '';
     shellAliases = {

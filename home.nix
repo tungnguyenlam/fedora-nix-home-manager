@@ -11,6 +11,7 @@
     ./programs/tailscaled.nix
     ./programs/git.nix
     ./programs/bash.nix
+    ./programs/direnv.nix
     ./programs/starship.nix
   ];
 
