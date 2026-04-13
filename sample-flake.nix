@@ -17,6 +17,7 @@
             python3
             python3Packages.pip
             python3Packages.virtualenv
+            stdenv.cc.cc.lib
             # Add other system dependencies here (e.g., git, sqlite)
           ];
 
